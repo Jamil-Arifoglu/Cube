@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-color: black;
+    display: flex;
+  
+}
+
+.task {
+    
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.wraper{
+    perspective-origin: center;
+    perspective: 350px;
+  
+   
+    
+    
+}
+
+
+.cub {
+    width: 200px;
+    height: 200px;
+  display: flex;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 5.0s;
+
+}
+
+.cub .top,
+.cub .back ,.cub .bottom, .cub .left,.cub .right{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.158);
+    position: absolute;
+
+
+
+}
+
+.cub .back  img {
+    
+   width: 100%;
+   height: 100%;
+}
+
+.cub .top {
+    transform: rotateX(90deg);
+    transform-origin: top;
+  
+}
+.cub .front{
+    width: 100%;
+    height: 100%;
+
+    transform: translateZ(200px) translateY(0px);
+}
+.cub .front img{
+    width: 100%;
+    height: 100%;
+}
+.cub .bottom{
+    background-color: cadetblue;
+    transform:rotateX(270deg);
+    transform-origin: bottom;
+   
+}
+.cub .left{
+    
+    transform: rotateY(270deg);
+    transform-origin: left;
+}
+.cub .left img{
+    width: 100%;
+    height: 100%;
+
+}
+.cub .right{
+  
+    transform: rotateY(-270deg);
+    transform-origin: right;
+}
+.cub .right img{
+    width: 100%;
+    height: 100%;
+}
+.cub:hover{
+    transform: rotateY(360deg);
+   
+}
+.color{
+   
+    width: 1000px;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.233);
+    margin: 0 auto;
+    border-radius: 300px;
+  
+}
